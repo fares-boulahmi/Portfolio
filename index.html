@@ -1,13 +1,345 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+    <title>Fares Boulahmi — Backend-Focused Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" id="dynamicFavicon" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="dot-bg"></div>
+    <nav>
+      <div class="nav-row">
+        <div class="nav-inner">
+          <span class="brand">~/fares</span>
+          <a href="#about" data-i18n="nav.about">about.md</a>
+          <a href="#highlights" data-i18n="nav.highlights">highlights.md</a>
+          <a href="#skills" data-i18n="nav.skills">skills.json</a>
+          <a href="#experience" data-i18n="nav.experience">experience/</a>
+          <a href="#education" data-i18n="nav.education">education.md</a>
+          <a href="#contact" data-i18n="nav.contact">contact.md</a>
+        </div>
+        <button
+          class="side-btn"
+          id="langBtn"
+          type="button"
+          aria-label="Switch language"
+        >
+          <span class="flag" id="langFlag">🇩🇪</span
+          ><span class="label" id="langLabel">DE</span>
+        </button>
+        <button
+          class="side-btn"
+          id="themeBtn"
+          type="button"
+          aria-label="Switch theme"
+        >
+          <span class="icon" id="themeIcon">☀</span
+          ><span class="label" id="themeLabel">Light</span>
+        </button>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="wrap">
+        <div class="editor-window">
+          <div class="editor-titlebar">
+            <span class="dot red"></span><span class="dot yellow"></span
+            ><span class="dot green"></span
+            ><span class="editor-tab">profile.ts</span>
+          </div>
+          <div class="editor-body">
+            <div class="gutter">1<br />2<br />3<br />4</div>
+            <div class="code-content">
+              <div class="code-line">
+                <span style="color: var(--violet)">const</span> developer = {
+              </div>
+              <div class="code-line">
+                &nbsp;&nbsp;name:
+
+                <h1 class="editor-title">
+                  &nbsp;"<span style="color: var(--mint)">Fares Boulahmi</span
+                  >"<span class="cursor-blink"></span>
+                </h1>
+                &nbsp;&nbsp;,
+              </div>
+              <div class="code-line">
+                &nbsp;&nbsp;role:
+                <span style="color: var(--mint)" data-i18n="hero.role"
+                  >"backend-focused full-stack"</span
+                >,
+              </div>
+              <div class="code-line">}<span style="opacity: 0.5">;</span></div>
+            </div>
+          </div>
+        </div>
+        <p class="hero-sub" data-i18n="hero.sub">
+          13 months shipping <strong>7 production platforms</strong> —
+          e-learning, a medical marketplace, a cloud-hosting reseller — most of
+          them solo, all on an
+          <strong>undocumented proprietary framework</strong> reverse-engineered
+          one module at a time. Now deepening data structures &amp; algorithms,
+          targeting backend-focused full-stack roles in Germany and beyond.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#experience" data-i18n="hero.ctaWork"
+            >./see-the-work</a
+          >
+          <a class="btn btn-ghost" href="#contact" data-i18n="hero.ctaContact"
+            >./get-in-touch</a
+          >
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="num">7</div>
+            <div class="lbl" data-i18n="hero.stat1">PLATFORMS</div>
+          </div>
+          <div class="stat">
+            <div class="num">13</div>
+            <div class="lbl" data-i18n="hero.stat2">MONTHS_IN_PROD</div>
+          </div>
+          <div class="stat">
+            <div class="num">4+</div>
+            <div class="lbl" data-i18n="hero.stat3">SOLO_OWNED</div>
+          </div>
+          <div class="stat">
+            <div class="num">0</div>
+            <div class="lbl" data-i18n="hero.stat4">DOCS_AVAILABLE</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker" data-i18n="about.kicker">// about.md</span>
+          <h2 data-i18n="about.title">const backstory = {}</h2>
+          <p data-i18n="about.sub">
+            Most of this work happened inside a proprietary system with no
+            documentation, no community, no support channel.
+          </p>
+        </div>
+        <div class="about-grid">
+          <div class="card reveal">
+            <p data-i18n="about.p1">
+              Full-stack developer with 13 months of hands-on production
+              experience delivering client web platforms — an e-learning system
+              used by a tutoring center with 200,000+ followers, a medical
+              price-comparison marketplace, and a cloud-hosting resale platform
+              — several built solo, all on an undocumented in-house framework
+              (Vue 2 + Liquid + Node.js + MongoDB) that demanded constant
+              reverse-engineering just to ship ordinary features.
+            </p>
+            <p data-i18n="about.p2">
+              Since late 2025, paused new client acquisition to rebuild data
+              structures &amp; algorithms fundamentals and deepen backend
+              engineering — while reaching working conversational English and
+              progressing toward B1/B2 German.
+            </p>
+          </div>
+          <div class="about-side">
+            <div class="card mini-card reveal reveal-delay-1" id>
+              <div class="label" data-i18n="about.lbl1">CORE_STACK</div>
+              <div class="value">Node.js · MongoDB · Vue.js / React</div>
+            </div>
+            <div class="card mini-card reveal reveal-delay-2" id>
+              <div class="label" data-i18n="about.lbl2">DEEPENING</div>
+              <div class="value" data-i18n="about.val2">
+                Data Structures &amp; Algorithms
+              </div>
+            </div>
+            <div class="card mini-card reveal reveal-delay-3" id>
+              <div class="label" data-i18n="about.lbl3">TARGETING</div>
+              <div class="value" data-i18n="about.val3">
+                Germany &amp; international backend roles
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="highlights">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker" data-i18n="hl.kicker">// highlights.md</span>
+          <h2 data-i18n="hl.title">console.log(wins)</h2>
+          <p data-i18n="hl.sub">
+            Four moments that explain how the work got done, not just what got
+            shipped.
+          </p>
+        </div>
+        <div class="highlights-grid">
+          <div class="card highlight reveal reveal-delay-1" id>
+            <div class="hi-icon">01</div>
+            <p data-i18n="hl.item1">
+              Shipped features across
+              <strong>7 client platforms in 13 months</strong>, solo or
+              near-solo on more than half.
+            </p>
+          </div>
+          <div class="card highlight reveal reveal-delay-2" id>
+            <div class="hi-icon">02</div>
+            <p data-i18n="hl.item2">
+              Became the team's go-to expert on an undocumented framework,
+              writing the <strong>internal docs</strong> still in use.
+            </p>
+          </div>
+          <div class="card highlight reveal reveal-delay-3" id>
+            <div class="hi-icon">03</div>
+            <p data-i18n="hl.item3">
+              Designed a
+              <strong>multi-tenant plugin architecture</strong> turning
+              onboarding into a zero-code checklist, live across 5 domains.
+            </p>
+          </div>
+          <div class="card highlight reveal reveal-delay-4" id>
+            <div class="hi-icon">04</div>
+            <p data-i18n="hl.item4">
+              Fixed a crashing dashboard tied to
+              <strong>4 years of live financial data</strong> with a
+              self-healing repair pattern.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker" data-i18n="sk.kicker">// skills.json</span>
+          <h2 data-i18n="sk.title">import * as skills</h2>
+          <p data-i18n="sk.sub">Hover a column to pause it and read closer.</p>
+        </div>
+        <div class="skills-columns reveal">
+          <div class="skill-col"><div class="skill-track" id="col1"></div></div>
+          <div class="skill-col reverse">
+            <div class="skill-track" id="col2"></div>
+          </div>
+          <div class="skill-col"><div class="skill-track" id="col3"></div></div>
+          <div class="skill-col"><div class="skill-track" id="col4"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker" data-i18n="exp.kicker">// experience/</span>
+          <h2 data-i18n="exp.title">ls -la ./projects</h2>
+          <p data-i18n="exp.sub">
+            Freelance full-stack developer — Aug 2024–Present, remote (Tunisia).
+            Click any file to expand it.
+          </p>
+        </div>
+        <div class="exp-list" id="expList"></div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker" data-i18n="edu.kicker">// education.md</span>
+          <h2 data-i18n="edu.title">base_case()</h2>
+        </div>
+        <div class="edu-grid">
+          <div class="card reveal">
+            <h3 data-i18n="edu.degree">BTS Informatique et Gestion</h3>
+            <div class="school">IPSET, Tunisia</div>
+            <div class="dates" data-i18n="edu.dates">
+              SEP 2021 – DEC 2023 · DEGREE CONFERRED 2024
+            </div>
+            <p data-i18n="edu.desc">
+              Two-year, post-Baccalauréat, practice-oriented program in applied
+              computing and IT management.
+            </p>
+            <div class="exp-note" data-i18n="edu.note">
+              Independent study, Sep 2025–present: intensive review of data
+              structures &amp; algorithms for competitive backend interviews.
+            </div>
+          </div>
+          <div class="card reveal reveal-delay-1" id>
+            <div class="lang-row">
+              <span class="lang-name" data-i18n="edu.arabic">Arabic</span
+              ><span class="lang-level" data-i18n="edu.native">NATIVE</span>
+            </div>
+            <div class="lang-row">
+              <span class="lang-name" data-i18n="edu.english">English</span
+              ><span class="lang-level" data-i18n="edu.prof">PROFESSIONAL</span>
+            </div>
+            <div class="lang-row">
+              <span class="lang-name" data-i18n="edu.german">German</span
+              ><span class="lang-level">B1 / B2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker" data-i18n="foot.kicker">// contact.md</span>
+          <h2 data-i18n="foot.SubTitle">async function connect() {}</h2>
+        </div>
+        <div class="card reveal">
+          <h2 data-i18n="foot.title">git clone this-collaboration</h2>
+          <p data-i18n="foot.sub">
+            Open to backend-focused full-stack roles in Germany and
+            internationally, plus select freelance work.
+          </p>
+          <div class="footer-links">
+            <a
+              class="btn btn-primary"
+              href="mailto:faresboulahmi@gmail.com"
+              data-i18n="foot.email"
+              >./email</a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://linkedin.com/in/faresboulahmi"
+              data-i18n="foot.linkedin"
+              >./linkedin</a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/fares-boulahmi"
+              data-i18n="foot.github"
+              >./github</a
+            >
+          </div>
+        </div>
+        <div class="copyright" data-i18n="foot.copyright">
+          TUNIS, TUNISIA · process.exit(0)
+        </div>
+      </div>
+    </footer>
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+        ✕
+      </button>
+      <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous">
+        ‹
+      </button>
+      <div class="lightbox-stage">
+        <div class="lightbox-track" id="lightboxTrack"></div>
+      </div>
+      <button class="lightbox-nav next" id="lightboxNext" aria-label="Next">
+        ›
+      </button>
+    </div>
+
+    <script src="Fav.js"></script>
+    <script src="dot-background.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
