@@ -971,7 +971,9 @@ function renderExperience() {
       (p, i) => `
     <div class="card exp-item${firstExpRender ? " reveal" : ""}" data-index="${i}">
       <div class="exp-head" role="button" tabindex="0" aria-expanded="false">
-        <div><span class="exp-num">0${i + 1}_</span><div class="exp-title">${p.title}</div><div class="exp-meta">${p.meta}</div><div class="exp-hook">${p.hook}</div></div>
+        <div><span class="exp-num">0${i + 1}_</span><div class="exp-title">${p.title}</div>
+        // <div class="exp-meta">${p.meta}</div>
+        <div class="exp-hook">${p.hook}</div></div>
         <div class="exp-toggle">+</div>
       </div>
       <div class="exp-body"><div class="exp-body-inner">
