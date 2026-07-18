@@ -966,13 +966,13 @@ function renderExperience() {
   const list = T[currentLang].projects;
   const labels = T[currentLang].exp;
   const expList = document.getElementById("expList");
+  // <div class="exp-meta">${p.meta}</div>
   expList.innerHTML = list
     .map(
       (p, i) => `
     <div class="card exp-item${firstExpRender ? " reveal" : ""}" data-index="${i}">
       <div class="exp-head" role="button" tabindex="0" aria-expanded="false">
         <div><span class="exp-num">0${i + 1}_</span><div class="exp-title">${p.title}</div>
-        <div class="exp-meta">${p.metas}</div>
         <div class="exp-hook">${p.hook}</div></div>
         <div class="exp-toggle">+</div>
       </div>
